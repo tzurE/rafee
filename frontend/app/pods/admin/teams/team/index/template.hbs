@@ -1,6 +1,6 @@
 <div class="panel">
   <h4 class="panel-title">Users in team <strong>{{name}}</strong></h4>
-  {{#each user in users}}
+  {{#each model.users as |user|}}
     <div>
     {{link-to user.fullName 'admin.users.user' user}}
     </div>

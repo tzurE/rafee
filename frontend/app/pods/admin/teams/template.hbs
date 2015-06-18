@@ -7,6 +7,7 @@
 <div class="row">
   <div class="small-5 columns">
     {{#each model as |team|}}
+      {{#if team.name}}
       <div class="row">
         <div class="small-8 columns">
           {{link-to team.name "admin.teams.team" team title="Details" class="button secondary small expand"}}
@@ -24,6 +25,7 @@
           </ul>
         </div>
       </div>
+      {{/if}}
     {{/each}}
   </div>
   <div class="small-7 columns">

@@ -1,0 +1,23 @@
+<form>
+  <div class="row">
+    <div class="small-12 columns">
+
+      {{#form-field errors=controller.errors key="name" label="Team-name"}}
+        {{input type="text" value=model.name}}
+      {{/form-field}}
+      <label>Users
+        {{view "select"
+            multiple="true"
+            content=controller.allUsers
+            optionLabelPath="content.fullName" 
+            selectionBinding="model.users"
+            class="form-control"}}
+      </label>
+    </div>
+  </div>
+  <div class="row">
+    <div class="small-12 columns">
+      <button type="submit" class="right" {{action 'submit' model}}>Submit</button>
+    </div>
+  </div>
+</form>

@@ -14,6 +14,8 @@ export default Ember.Mixin.create({
         // the error message
         this.set('errors', reason.errors);
       });
+
     }
   }
+  
 });

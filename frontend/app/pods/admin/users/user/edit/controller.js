@@ -6,7 +6,7 @@ export default Ember.Controller.extend(SubmitActionMixin, {
   transitionToArgs: Ember.computed('model.id', function() {
     return ['admin.users.user', this.model.get('id')];
   }),
-
+ 
   flashSuccessMessage: 'Succesfully saved!'
 
 });

@@ -22,6 +22,14 @@ body {
   z-index: 98;
 }
 
+.spinner-align {
+  center: true;
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translateY(-50%);
+  transform: translateX(-50%);
+}
 
 /* TODO: use compass animations instead */
 /* Generated with Bounce.js. Edit at http://goo.gl/Vn2Euz */
