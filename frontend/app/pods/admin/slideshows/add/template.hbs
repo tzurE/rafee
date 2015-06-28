@@ -1,1 +1,30 @@
-{{outlet}}
+<form>
+	<div class="row">
+		<div class="small-12 columns">
+      {{#form-field errors=controller.errors key="name" label="Slideshow Name"}}
+      {{input type="text" value=model.name}}
+      {{/form-field}}	     
+      {{#form-field errors=controller.errors key="templates" label="Templates"}}
+      {{input type="text" value=model.templates}}
+      {{/form-field}}  
+      {{#form-field errors=controller.errors key="transitionInterval" label="Transition Interval"}}
+      {{input type="number" value=model.transitionInterval}}
+      {{/form-field}}        
+      {{#form-field errors=controller.errors key="cachingInterval" label="Caching Interval"}}
+      {{input type="number" value=model.cachingInterval}}
+      {{/form-field}} 
+      <label>Teams
+        {{view "select"
+            content=controller.allTeams
+            optionLabelPath="content.name"
+            selectionBinding="model.team"            
+            class="form-control"}}
+      </label>
+  		</div> 
+	</div>
+<div class="row">
+    <div class="small-12 columns">
+      <button type="submit" class="right" {{action 'submit' model}}>Submit</button>
+    </div>
+  </div>
+</form> 

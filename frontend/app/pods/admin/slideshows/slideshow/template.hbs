@@ -1,15 +1,19 @@
 <div class="panel">
   <div class="row">
     <div class="small-3 columns"><strong>ID</strong></div>
-    <div class="small-9 columns">{{id}}</div>
+    <div class="small-9 columns">{{model.id}}</div>
   </div>
   <div class="row">
     <div class="small-3 columns"><strong>Name</strong></div>
-    <div class="small-9 columns">{{name}}</div>
+    <div class="small-9 columns">{{model.name}}</div>
+  </div>
+  <div class="row">
+    <div class="small-3 columns"><strong>Interval</strong></div>
+    <div class="small-9 columns">{{model.transitionInterval}}</div>
   </div>
   <div class="row">
     <div class="small-3 columns"><strong>Team</strong></div>
-    <div class="small-9 columns">{{link-to team.name "admin.teams.team" team}}</div>
+    <div class="small-9 columns">{{link-to model.team.name "admin.teams.team" team}}</div>
   </div>
 </div>
 
