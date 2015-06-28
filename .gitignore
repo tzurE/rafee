@@ -19,4 +19,4 @@ hosts~
 *.pyc
 
 #vagrant-stuff
-.vagrant/machines/default/virtualbox/action_provision
+*/.vagrant
