@@ -19,4 +19,5 @@ hosts~
 *.pyc
 
 #vagrant-stuff
-/.vagrant/*
+*/.vagrant
+
