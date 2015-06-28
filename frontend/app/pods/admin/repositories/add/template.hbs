@@ -1,0 +1,14 @@
+<form>
+  <div class="row">
+    <div class="small-12 columns">
+      {{#form-field errors=controller.errors key="url" label="Repository"}}
+        {{input type="text" value=model.url}}
+      {{/form-field}}
+    </div>
+  </div>
+  <div class="row">
+    <div class="small-12 columns">
+      <button type="submit" class="right" {{action 'submit' model}}>Submit</button>
+    </div>
+  </div>
+</form>

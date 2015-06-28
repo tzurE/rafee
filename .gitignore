@@ -14,3 +14,9 @@ coverage.*
 .coverage
 htmlcov
 vagrant_ansible_inventory_default
+Vagrantfile~
+hosts~
+*.pyc
+
+#vagrant-stuff
+.vagrant/machines/default/virtualbox/action_provision

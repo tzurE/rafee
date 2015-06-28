@@ -7,6 +7,7 @@
 <div class="row">
   <div class="small-10 columns">
     {{#each model as |repo|}}
+    {{#if repo.url}}
       <div class="row">
         <div class="small-7 columns">
           <a href="{{repo.url}}">{{repo.url}}</a>
@@ -15,6 +16,7 @@
           {{delete-confirmation resource=repo}}
         </div>
       </div>
+      {{/if}}
     {{/each}}
   </div>
   <div class="small-7 columns">
