@@ -1,12 +1,12 @@
 <div class="panel">
   <div class="row">
     <div class="small-3 columns"><strong>Name</strong></div>
-    <div class="small-9 columns">{{name}}</div>
+    <div class="small-9 columns">{{model.name}}</div>
   </div>
   <div class="row">
     <div class="small-3 columns"><strong>Data source URL</strong></div>
     <div class="small-9 columns">
-      {{#if dataSourceUrl}}<a href="{{dataSourceUrl}}">{{dataSourceUrl}}</a>{{else}}None{{/if}}
+      {{#if model.dataSourceUrl}}<a href="{{dataSourceUrl}}">{{model.dataSourceUrl}}</a>{{else}}None{{/if}}
     </div>
   </div>
 </div>

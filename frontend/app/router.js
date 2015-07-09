@@ -53,6 +53,7 @@ Router.map(function() {
       this.route('template', { path: ':template_id' }, function() {
         this.route('render');
       });
+      this.route('preview');
     });
   });
   this.route("error");
