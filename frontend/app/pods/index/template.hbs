@@ -9,13 +9,17 @@
                  optionLabelPath="content.name"
                  selection=selectedSlideshow}}
         </div>
-        <div class="small-2 columns" {{action "present" on="submit"}}>
-          <button type="submit" class="postfix">Go!</button>
+        <div class="small-2 columns">
+        {{#link-to 'slideshows.slideshow' selectedSlideshow class="postfix button"}} Go! 
+        {{/link-to}}
         </div>
+<!--         <div class="small-2 columns" {{action "present" on="submit"}}>
+          <button type="submit" class="postfix">Go!</button>
+        </div> -->
       </div>
     </form>
     {{#if selectedSlideshow}}
-      <h4>Template names in {{selectedSlideshow.name}}</h4>
+      <h4>Template names in {{selectedSlideshow.name}}, Slideshow ID: {{selectedSlideshow.id}}</h4>
       <table>
         <thead>
           <tr>

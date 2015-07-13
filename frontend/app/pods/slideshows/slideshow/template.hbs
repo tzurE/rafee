@@ -1,0 +1,9 @@
+{{#if isLoading}}
+  <div class="row">
+    <div class="small-3 small-centered column">
+      {{partial "loading"}}
+    </div>
+  </div>
+{{else}}
+{{rendered-template renderResult}}
+{{/if}}

@@ -15,6 +15,10 @@ Router.map(function() {
   this.route('login');
   this.route('profile');
   this.route('presentation', { path: 'presentation/:slideshow_id' });
+  this.route('slideshows', function(){
+    this.route('slideshow', { path: ':slideshow_id' });
+  });
+
 
   this.route('admin', function() {
 
