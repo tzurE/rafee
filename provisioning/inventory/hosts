@@ -3,5 +3,5 @@
 vagrant ansible_ssh_host=127.0.0.1 ansible_ssh_port=2222 ansible_ssh_user=vagrant
 
 [production]
-prod
+prod ansible_ssh_host=hsg-lcd.haifa.ibm.com ansible_ssh_user=root ask_sudo_pass=yes
 staging

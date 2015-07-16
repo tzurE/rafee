@@ -16,7 +16,9 @@ Router.map(function() {
   this.route('profile');
   this.route('presentation', { path: 'presentation/:slideshow_id' });
   this.route('slideshows', function(){
-    this.route('slideshow', { path: ':slideshow_id' });
+    this.route('slideshow', { path: ':slideshow_id' }, function(){
+      this.route('templates', { path: ':template_id'});
+    });
   });
 
 
@@ -49,6 +51,7 @@ Router.map(function() {
       this.route('slideshow', { path: ':slideshow_id' }, function() {
         this.route('delete');
         this.route('edit');
+        this.route('templates');
       });
     });
 

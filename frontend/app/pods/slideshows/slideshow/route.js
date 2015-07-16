@@ -13,7 +13,8 @@ export default Ember.Route.extend({
     controller.set('model', model);
     var self = this;
     var url =  ENV.APP.API_URL + '/slide/';
-    var data = { template_name: templates_array[0] };
+    var i = 0;
+    var data = { template_name: templates_array[i] };
     ajax(url, {
       type: 'POST', data: data
     }).then(function(response) {
@@ -21,7 +22,7 @@ export default Ember.Route.extend({
     }).then(function(task) {
       controller.set('task', task);
       task.poll();
-    }); 
+    });
   },
 
   deactivate: function() {
