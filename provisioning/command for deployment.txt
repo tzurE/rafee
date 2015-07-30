@@ -1,1 +1,1 @@
-ansible-playbook deploy.yml --ask-pass -i inventory/
+ansible-playbook site/deploy.yml --ask-pass -i inventory/

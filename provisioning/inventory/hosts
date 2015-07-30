@@ -1,6 +1,8 @@
 [devservers]
 # TODO: relative path to private key breaks ability to run vagrant up from anywhere in the project
 vagrant ansible_ssh_host=127.0.0.1 ansible_ssh_port=2222 ansible_ssh_user=vagrant
+#for the dev machines on the Vsphere
+#vagrant ansible_ssh_host=9.151.163.223 ansible_ssh_user=root
 
 [production]
 prod ansible_ssh_host=hsg-lcd.haifa.ibm.com ansible_ssh_user=root ask_sudo_pass=yes
