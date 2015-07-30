@@ -36,10 +36,10 @@ module('Integration - Login', {
             return [400, {}, { non_field_errors: ['fake'] }];
         }
       });
-      this.get(ENV.APP.API_NAMESPACE + '/users/profile/', function(request) {
+      this.get(ENV.APP.API_NAMESPACE + '/users/profile/', function() {
         return [200, {}, user];
       });
-      this.get(ENV.APP.API_NAMESPACE + '/slideshows/', function(request) {
+      this.get(ENV.APP.API_NAMESPACE + '/slideshows/', function() {
         return [200, {}, []];
       });
     });
@@ -77,7 +77,7 @@ test('it hides admin dashboard link if user is not staff', function(assert) {
 
 
 test('it shows error message on failed login', function(assert) {
-  assert.expect(4);
+  assert.expect(3);
   visit('/login');
   fillIn('.login-username', 'admin');
   fillIn('.login-password', 'bad');

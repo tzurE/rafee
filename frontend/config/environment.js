@@ -19,6 +19,10 @@ module.exports = function(environment) {
       // when it is created
     }
   };
+  ENV.contentSecurityPolicy = {
+    'img-src': "'self'",
+    'style-src': "'self' 'unsafe-inline'"
+  };
 
   ENV['simple-auth'] = {};
 
@@ -63,10 +67,7 @@ module.exports = function(environment) {
 
   ENV['simple-auth-token'] = {
     serverTokenEndpoint: ENV.APP.API_URL + '/auth-token',
-    authorizationPrefix: 'JWT ',
-    refreshAccessTokens: true,
-    timeFactor: 1,
-    refreshLeeway: 300
+    authorizationPrefix: 'JWT '
   };
 
   return ENV;
